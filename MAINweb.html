@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<head>
+    <style>
+        /* Stats Heads */
+    .stats-container {
+      margin-top: 1rem;
+      position: relative;
+    }
+
+    #stats-frame {
+      width: 100%;
+      height: 612px;
+      border: none;
+      border-radius: 0.5rem;
+      box-shadow: 0 0 0 1px rgba(0,0,0,.1);
+    }
+
+    @media (min-width: 704px) {
+      #stats-frame {
+        height: 292px;
+      }
+    }
+
+    .resize-handle {
+      position: absolute;
+      inset-block: 0;
+      left: 100%;
+      display: none;
+      align-items: center;
+      padding-inline: 0.5rem;
+      cursor: ew-resize;
+    }
+
+    @media (min-width: 640px) {
+      .resize-handle {
+        display: flex;
+      }
+    }
+
+    .resize-bar {
+      height: 2rem;
+      width: 0.375rem;
+      background: #9ca3af;
+      border-radius: 9999px;
+    }
+
+
+
+        img { filter:
+                      sepia(1) hue-rotate(190deg) opacity(.46) grayscale(.7) }
+    </style>
+
+    <title>Project Money Management</title>
+</head>
+
+<body>
+
+
+
+    <!-- Stats BOdy -->
+    <section class="stats-container">
+    <iframe
+      id="stats-frame"
+      src="iframess.html"
+      title="With brand icon preview"
+      aria-label="With brand icon preview"
+      role="document">
+    </iframe>
+
+    <div class="resize-handle">
+      <div class="resize-bar"></div>
+    </div>
+  </section>
+</body>
