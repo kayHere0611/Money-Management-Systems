@@ -27,6 +27,33 @@
   document.getElementById("category").value = "";
   document.getElementById("amount").value = "";
 }
+
+function updateUI() {
+  let totalIncome = 0;
+  let totalExpense = 0;
+  let list = document.getElementById("transactionList");
+  list.innerHTML = "";
+
+  transactions.forEach(function(t) {
+    let li = document.createElement("li");
+    li.textContent = t.category + " - ₹" + t.amount;
+    li.className = t.type;
+    list.appendChild(li);
+
+    if (t.type === "income") {
+      totalIncome += t.amount;
+    } else {
+      totalExpense += t.amount;
+    }
+  });
+
+  let balance = totalIncome - totalExpense;
+
+  document.getElementById("totalIncome").textContent = totalIncome;
+  document.getElementById("totalExpense").textContent = totalExpense;
+  document.getElementById("balance").textContent = balance;
+}
+
     </script>
     <style>
         /* Stats Heads */
